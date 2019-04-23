@@ -1,0 +1,12 @@
+
+POST http://localhost:8000/hero HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Tushar R. Gosavi",
+    "idenntity" : "Some person",
+    "hometown" : "Mumbai",
+    "age" : 37
+}
+
+###

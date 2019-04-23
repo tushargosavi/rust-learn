@@ -96,7 +96,6 @@ fn start_client() {
         }
         println!("response from the server {}", result);
     }
-
 }
 
 fn main() {
