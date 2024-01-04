@@ -5,7 +5,7 @@ use self::diesel_try::*;
 use std::io::{stdin, Read};
 
 fn main() {
-    let connection = establish_connectoin();
+    let mut connection = establish_connectoin();
 
     println!("What would you like your title ");
     let mut title = String::new();
@@ -15,7 +15,7 @@ fn main() {
     let mut body = String::new();
     stdin().read_to_string(&mut body).unwrap();
 
-    let post = create_post(&connection, title, &body);
+    let post = create_post(&mut connection, title, &body);
     println!("\nSave draft {} with id {}", title, post.id);
 }
 

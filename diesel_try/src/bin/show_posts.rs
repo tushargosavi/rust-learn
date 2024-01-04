@@ -8,10 +8,10 @@ use self::diesel::prelude::*;
 fn main() {
     use diesel_try::schema::posts::dsl::*;
 
-    let connection = establish_connectoin();
+    let mut connection = establish_connectoin();
     let result = posts.filter(published.eq(true))
         .limit(5)
-        .load::<Post>(&connection)
+        .load::<Post>(&mut connection)
         .expect("Error loading posts");
 
     println!("Displaying {} posts", result.len());

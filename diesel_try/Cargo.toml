@@ -5,5 +5,5 @@ authors = ["Tushar R. Gosavi <tushargosavi@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-diesel = { version = "1.4.2", features = ["postgres"] }
-dotenv = "0.10"
+diesel = { version = "2.1.4", features = ["postgres"] }
+dotenv = "0.15.0"
